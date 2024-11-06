@@ -20,21 +20,26 @@ This project's **main objective** is to build a Machine Learning model that is c
 - ## **Data Dictionary:**
 | Column | Description |
 |-------------------------------|----------------------------------------------------|
-| **CONTRACT_NUMBER** | Contract identification number |
-| **CONTRACT_SIGNING_DATE** | Date the contract was signed |
-| **FINANCING_TYPE** | Type of financing offered |
-| **YEAR_RATE** | Annual interest rate of the contract |
-| **FINANCING_PZ** | Financing term (in months) |
-| **CUSTOMER_CITY** | City where the customer lives |
-| **CLIENT_STATE** | State where the customer lives |
-| **CLIENT_MONTHLY_INCOME** | Customer's monthly income |
-| **QT_PC_LATE** | Number of overdue installments |
+| **NUMERO_CONTRATO** | Contract identification number |
+| **DATA_ASSINATURA_CONTRATO** | Date the contract was signed |
+| **TIPO_FINANCIAMENTO** | Type of financing offered |
+| **TAXA_AO_ANO** | Annual interest rate of the contract |
+| **PZ_FINANCIAMENTO** | Financing term (in months) |
+| **CIDADE_CLIENTE** | City where the customer lives |
+| **ESTADO_CLIENTE** | State where the customer lives |
+| **RENDA_MENSAL_CLIENTE** | Customer's monthly income |
+| **QT_PC_ATRASO** | Number of overdue installments |
 | **QT_DIAS_PRIM_PC_ATRASO** | Number of days the first installment is overdue |
-| **QT_TOTAL_PC_PAYMENTS** | Total number of installments paid |
+| **QT_TOTAL_PC_PAGAS** | Total number of installments paid |
 | **VL_TOTAL_PC_PAGAS** | Total amount of installments paid |
-| **QT_PC_PAGAS_ON_DAY** | Number of installments paid on time |
+| **QT_PC_PAGAS_EM_DIA** | Number of installments paid on time |
 | **QT_DIAS_MIN_ATRASO** | Lowest number of days in arrears |
-| **QT_DIAS_MAX_ATRASO** | Highest amount
+| **QT_DIAS_MAX_ATRASO** | Highest amount|
+| **QT_DIAS_MEDIA_ATRASO** | Average days in arrears |
+| **VALOR_FINANCIAMENTO** | Total financing amount |
+| **VALOR_PARCELA** | Amount of each installment |
+| **IDADE_DATA_ASSINATURA_CONTRATO** | Customer's age at the time of signing the contract |
+| **INADIMPLENTE_COBRANCA** | Indicator if the customer is in default |
 
 # Key Features:
 - **Type of problem**: *Classification*
@@ -237,9 +242,9 @@ This project's **main objective** is to build a Machine Learning model that is c
   
   - Monthly Income
 
-    * Income distribution: The majority of customers are in **up to R$ 1,800** and **R$ 6,000 to R$ 8,000**.
-    * Default rates: In all income brackets, the number of defaulters exceeds the number of non-defaulters.
-    * Default Trend: Customers with a monthly income of **up to R$ 4,000** have a significantly higher tendency to be in default compared to those in higher income brackets.
+    * **Income distribution**: The majority of customers are in **up to R$ 1,800** and **R$ 6,000 to R$ 8,000**.
+    * **Default rates**: In all income brackets, the number of defaulters exceeds the number of non-defaulters.
+    * **Default Trend**: Customers with a monthly income of **up to R$ 4,000** have a significantly higher tendency to be in default compared to those in higher income brackets.
 
   - Annual Rate
 
@@ -342,17 +347,17 @@ Predicted results can be found in **`excel/resultado.xlsx`**.
   - **F1 Score: 0.92:** The harmonic mean of precision and recall. A high F1 Score indicates a **good balance** between precision and recall.
   
   - **Confusion Matrix:** 
-      - True Negatives (2241):** Correctly identified negative cases.
+      - **True Negatives (2241):** Correctly identified negative cases.
       - **False Positives (189):** Positive cases incorrectly identified.
       - **False Negatives (197):** Negative cases incorrectly identified.
-      - True Positives (2194):** Positive cases correctly identified. This shows that both false positives and false negatives are **relatively low**, indicating **good performance**.
+      - **True Positives (2194):** Positive cases correctly identified. This shows that both false positives and false negatives are **relatively low**, indicating **good performance**.
       
   - **ROC AUC Score: 0.92:** Area under the ROC curve. A score of **0.92** indicates that the model does a **good job** of distinguishing between positive and negative classes.
 
   - **Classification:**
     - **Class 0 and Class 1:** Both classes have high precision, recall and F1 scores, showing balanced performance in different categories.
-    - Macro Average:** Average precision, recall and F1 scores equally between the classes.
-    - Weighted Average:** Takes into account the unbalance of the classes when averaging precision, recall and F1 scores.
+    - **Macro Average:** Average precision, recall and F1 scores equally between the classes.
+    - **Weighted Average:** Takes into account the unbalance of the classes when averaging precision, recall and F1 scores.
    
 # PRESCRIPTIVE ANALYSIS
 
@@ -389,7 +394,7 @@ In this project, an analysis was developed to **predict the probability of custo
 
 4. **Interpretability**: We used **SHAP** values to interpret the predictions of the final model, identifying the most influential **variables** for the probability of default (**PZ_FINANCING**, **QT_PC_DELIENT**, **QT_DAYS_PRIM_PC_DELIENT**).
 
-The final model was able to accurately identify the customers most likely to default, highlighting key variables such as **PZ_FINANCING**, **QT_PC_DELEASE**, **MENSE_INCOME**, **QT_DAYS_PRIM_PC_DELEASE**. This model can be applied to help financial institutions reduce risk by identifying potential defaulters and enabling preventive action.
+The final model was able to accurately identify the customers most likely to default, highlighting key variables such as **PZ_FINANCIAMENTO**, **QT_PC_ATRASO**, **RENDA_MENSAL_CLIENTE**, **QT_DIAS_PRIM_PC_ATRASO**. This model can be applied to help financial institutions reduce risk by identifying potential defaulters and enabling preventive action.
 
 In conclusion, the project has provided an efficient solution for predicting defaults, with high potential for practical application to improve risk management and decision-making in the financial sector.
   
