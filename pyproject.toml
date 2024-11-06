@@ -13,6 +13,11 @@ python-dotenv = "^1.0.1"
 plotly-express = "^0.4.1"
 nbformat = "^5.10.4"
 kaleido = "0.1.0.post1"
+scikit-learn = "^1.5.2"
+imbalanced-learn = "^0.12.4"
+xgboost = "^2.1.2"
+joblib = "^1.4.2"
+openpyxl = "^3.1.5"
 
 
 [tool.poetry.group.dev.dependencies]
