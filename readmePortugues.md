@@ -2,7 +2,7 @@
 
 # Probabilidade de Inadimplência
 
-### :brazil: [Versão em Português](https://github.com/FelipeLRoll/previsao-inadimplencia/blob/main/readmePortugues.md)
+### :us: [English Version](https://github.com/FelipeLRoll/previsao-inadimplencia/blob/main/readme.md)
 ### Inspirado por: [Default Rate](https://www.youtube.com/watch?v=ey4GZtO_VzE&t=0s)
 
 # Visão Geral do Projeto
