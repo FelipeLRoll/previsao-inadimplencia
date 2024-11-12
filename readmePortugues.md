@@ -336,7 +336,7 @@ Os resultados previstos podem ser encontrados em **`excel/resultado.xlsx`**.
 
 - Métricas:
   
-  - **Precisão: 92.62%:** Aproximadamente **92%** das previsões feitas pelo modelo estão corretas.
+  - **Acurácia: 92.62%:** Aproximadamente **92%** das previsões feitas pelo modelo estão corretas.
 
   - **Precisão: 0.93:** De todas as previsões que o modelo identificou como positivas, 92% eram realmente positivas. Uma **alta precisão** indica uma **baixa taxa** de falsos positivos.
   
